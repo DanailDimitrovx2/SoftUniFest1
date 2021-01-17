@@ -1,0 +1,14 @@
+{% extends "users/base.html" %}
+{% block content %}
+    {% for new in news %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="text-muted">{{ new.date }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ new.title }}</a></h2>
+            <p class="article-content">{{ new.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
